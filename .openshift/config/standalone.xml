@@ -89,7 +89,8 @@
         <subsystem xmlns="urn:jboss:domain:configadmin:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:1.0">
             <datasources>
-                <datasource jndi-name="java:jboss/datasources/ExampleDS" enabled="true" use-java-context="true" pool-name="H2DS">
+                <datasource jndi-name="java:jboss/datasources/ExampleDS" enabled="true" use-java-context="true"
+                            pool-name="H2DS">
                     <connection-url>jdbc:h2:${jboss.server.data.dir}/test;DB_CLOSE_DELAY=-1</connection-url>
                     <driver>h2</driver>
                     <security>
@@ -97,20 +98,26 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:jboss/datasources/MysqlDS" enabled="${mysql.enabled}" use-java-context="true" pool-name="MysqlDS">
-                    <connection-url>jdbc:mysql://${env.OPENSHIFT_DB_HOST}:${env.OPENSHIFT_DB_PORT}/${env.OPENSHIFT_GEAR_NAME}</connection-url>
+                <datasource jndi-name="java:jboss/datasources/MysqlDS" enabled="${mysql.enabled}"
+                            use-java-context="true" pool-name="MysqlDS">
+                    <connection-url>
+                        jdbc:mysql://${env.OPENSHIFT_DB_HOST}:${env.OPENSHIFT_DB_PORT}/${env.OPENSHIFT_GEAR_NAME}
+                    </connection-url>
                     <driver>mysql</driver>
                     <security>
-                      <user-name>${env.OPENSHIFT_DB_USERNAME}</user-name>
-                      <password>${env.OPENSHIFT_DB_PASSWORD}</password>
+                        <user-name>${env.OPENSHIFT_DB_USERNAME}</user-name>
+                        <password>${env.OPENSHIFT_DB_PASSWORD}</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:jboss/datasources/PostgreSQLDS" enabled="${postgresql.enabled}" use-java-context="true" pool-name="PostgreSQLDS" use-ccm="true">
-                    <connection-url>jdbc:postgresql://${env.OPENSHIFT_DB_HOST}:${env.OPENSHIFT_DB_PORT}/${env.OPENSHIFT_GEAR_NAME}</connection-url>
+                <datasource jndi-name="java:jboss/datasources/PostgreSQLDS" enabled="${postgresql.enabled}"
+                            use-java-context="true" pool-name="PostgreSQLDS" use-ccm="true">
+                    <connection-url>
+                        jdbc:postgresql://${env.OPENSHIFT_DB_HOST}:${env.OPENSHIFT_DB_PORT}/${env.OPENSHIFT_GEAR_NAME}
+                    </connection-url>
                     <driver>postgresql</driver>
                     <security>
-                      <user-name>${env.OPENSHIFT_DB_USERNAME}</user-name>
-                      <password>${env.OPENSHIFT_DB_PASSWORD}</password>
+                        <user-name>${env.OPENSHIFT_DB_USERNAME}</user-name>
+                        <password>${env.OPENSHIFT_DB_PASSWORD}</password>
                     </security>
                 </datasource>
                 <drivers>
@@ -127,7 +134,8 @@
             </datasources>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
-            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" deployment-timeout="120"/>
+            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"
+                                deployment-timeout="120"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:ee:1.0"/>
         <subsystem xmlns="urn:jboss:domain:ejb3:1.2">
@@ -144,8 +152,10 @@
             </mdb>
             <pools>
                 <bean-instance-pools>
-                    <strict-max-pool name="slsb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
-                    <strict-max-pool name="mdb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
+                    <strict-max-pool name="slsb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5"
+                                     instance-acquisition-timeout-unit="MINUTES"/>
+                    <strict-max-pool name="mdb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5"
+                                     instance-acquisition-timeout-unit="MINUTES"/>
                 </bean-instance-pools>
             </pools>
             <caches>
@@ -221,12 +231,13 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jacorb:1.1">
             <orb>
-            	<initializers transactions="spec" security="on"/>
+                <initializers transactions="spec" security="on"/>
             </orb>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxr:1.0">
             <connection-factory jndi-name="java:jboss/jaxr/ConnectionFactory"/>
-            <juddi-server publish-url="http://${env.OPENSHIFT_INTERNAL_IP}:8080/juddi/publish" query-url="http://${env.OPENSHIFT_INTERNAL_IP}:8080/juddi/query"/>
+            <juddi-server publish-url="http://${env.OPENSHIFT_INTERNAL_IP}:8080/juddi/publish"
+                          query-url="http://${env.OPENSHIFT_INTERNAL_IP}:8080/juddi/query"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jca:1.1">
@@ -234,15 +245,15 @@
             <bean-validation enabled="false"/>
             <default-workmanager>
                 <short-running-threads>
-                        <core-threads count="10"/>
-                        <queue-length count="10" />
-                        <max-threads count="10" />
+                    <core-threads count="10"/>
+                    <queue-length count="10"/>
+                    <max-threads count="10"/>
                     <keepalive-time time="10" unit="seconds"/>
                 </short-running-threads>
                 <long-running-threads>
-                        <core-threads count="10"/>
-                        <queue-length count="10" />
-                        <max-threads count="10" />
+                    <core-threads count="10"/>
+                    <queue-length count="10"/>
+                    <max-threads count="10"/>
                     <keepalive-time time="10" unit="seconds"/>
                 </long-running-threads>
             </default-workmanager>
@@ -250,17 +261,17 @@
         <subsystem xmlns="urn:jboss:domain:jdr:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jgroups:1.0" default-stack="tcp">
             <stack name="tcp">
-                <transport type="TCP" socket-binding="jgroups-tcp"> 
-                	<property name="external_addr">${env.OPENSHIFT_GEAR_DNS}</property>
+                <transport type="TCP" socket-binding="jgroups-tcp">
+                    <property name="external_addr">${env.OPENSHIFT_GEAR_DNS}</property>
                     <property name="external_port">${env.OPENSHIFT_JBOSS_CLUSTER_PROXY_PORT}</property>
                     <property name="bind_port">7600</property>
                     <property name="bind_addr">${env.OPENSHIFT_INTERNAL_IP}</property>
                 </transport>
                 <protocol type="TCPPING">
-                	<property name="timeout">3000</property>
-                	<property name="initial_hosts">${env.OPENSHIFT_JBOSS_CLUSTER}</property>
-                	<property name="port_range">0</property>
-                	<property name="num_initial_members">1</property>
+                    <property name="timeout">3000</property>
+                    <property name="initial_hosts">${env.OPENSHIFT_JBOSS_CLUSTER}</property>
+                    <property name="port_range">0</property>
+                    <property name="num_initial_members">1</property>
                 </protocol>
                 <protocol type="MERGE2"/>
                 <protocol type="FD"/>
@@ -274,9 +285,9 @@
                 <protocol type="MFC"/>
                 <protocol type="FRAG2"/>
                 <protocol type="AUTH">
-                        <property name="auth_class">org.jgroups.auth.MD5Token</property>
-                        <property name="token_hash">SHA</property>
-                        <property name="auth_value">${env.OPENSHIFT_JBOSS_CLUSTER}</property>
+                    <property name="auth_class">org.jgroups.auth.MD5Token</property>
+                    <property name="token_hash">SHA</property>
+                    <property name="auth_value">${env.OPENSHIFT_JBOSS_CLUSTER}</property>
                 </protocol>
                 <!--protocol type="pbcast.STATE_TRANSFER"/>
                 <protocol type="pbcast.FLUSH"/-->
@@ -453,8 +464,10 @@
                 <security-domain name="messaging" cache-type="default">
                     <authentication>
                         <login-module code="UsersRoles" flag="required">
-                            <module-option name="usersProperties" value="${jboss.server.config.dir}/application-users.properties"/>
-                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/application-roles.properties"/>
+                            <module-option name="usersProperties"
+                                           value="${jboss.server.config.dir}/application-users.properties"/>
+                            <module-option name="rolesProperties"
+                                           value="${jboss.server.config.dir}/application-roles.properties"/>
                         </login-module>
                     </authentication>
                 </security-domain>
@@ -481,7 +494,8 @@
             <wsdl-host>${jboss.bind.address:127.0.0.1}</wsdl-host>
             <endpoint-config name="Standard-Endpoint-Config"/>
             <endpoint-config name="Recording-Endpoint-Config">
-                <pre-handler-chain name="recording-handlers" protocol-bindings="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM">
+                <pre-handler-chain name="recording-handlers"
+                                   protocol-bindings="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM">
                     <handler name="RecordingHandler" class="org.jboss.ws.common.invocation.RecordingServerHandler"/>
                 </pre-handler-chain>
             </endpoint-config>

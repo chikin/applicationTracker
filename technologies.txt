@@ -1,0 +1,10 @@
+This application uses Openshift from Redhat.
+
+Including the postgres 8.4 cartridge 
+PostgreSQL 8.4 database added.  Please make note of these credentials:
+
+   Root User: admin
+   Root Password: c6Js6ydg2MhR
+   Database Name: applicationTracker
+
+Connection URL: postgresql://127.5.116.1:5432/
