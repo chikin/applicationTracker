@@ -29,7 +29,7 @@ public class IsEverythingConfiguredTest {
     }
 
     @Test
-    public void testFailure() {
+    public void testSuccess() {
         assertTrue("Everything is configured", true);
     }
 
