@@ -11,7 +11,7 @@
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
         <javaee6.with.tools.version>1.0.0.M14</javaee6.with.tools.version>
-        <seam.version>3.0.0.Final</seam.version>
+        <seam.version>3.1.0.Final</seam.version>
     </properties>
 
     <dependencyManagement>
@@ -156,10 +156,16 @@ as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.seam.security</groupId>
             <artifactId>seam-security</artifactId>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.seam.security</groupId>
             <artifactId>seam-security-external</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>3.0-alpha-1</version>
         </dependency>
     </dependencies>
 
