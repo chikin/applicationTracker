@@ -147,6 +147,21 @@ as the API is included in JBoss AS 7 -->
         </dependency>
     </dependencies>
 
+    <!-- Seam Security-->
+    <dependency>
+        <groupId>org.jboss.seam.security</groupId>
+        <artifactId>seam-security-api</artifactId>
+        <version>3.1.0.Final</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jboss.seam.security</groupId>
+        <artifactId>seam-security</artifactId>
+        <version>3.1.0.Final</version>
+        <scope>runtime</scope>
+    </dependency>
+    <!-- End Seam Security-->
+
 
     <build>
         <!-- Maven will append the version to the finalName (which is the name
