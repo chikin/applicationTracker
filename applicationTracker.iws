@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d4b658f-e921-49df-8bfc-3528b88801f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applicationTracker.iml" afterPath="$PROJECT_DIR$/applicationTracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applicationTracker.ipr" afterPath="$PROJECT_DIR$/applicationTracker.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applicationTracker.iws" afterPath="$PROJECT_DIR$/applicationTracker.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OpenIdRelayingPartyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/OpenIdRelayingPartyImpl.java" />
     </list>
     <ignored path="applicationTracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -205,7 +202,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="26" selection-start="6424" selection-end="6424" vertical-scroll-proportion="0.38322368">
+            <state line="126" column="17" selection-start="5286" selection-end="5286" vertical-scroll-proportion="0.38487974">
               <folding />
             </state>
           </provider>
@@ -1211,7 +1208,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="26" selection-start="6424" selection-end="6424" vertical-scroll-proportion="0.38322368">
+        <state line="126" column="17" selection-start="5286" selection-end="5286" vertical-scroll-proportion="0.38487974">
           <folding />
         </state>
       </provider>

@@ -29,13 +29,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.jboss.seam</groupId>
-                <artifactId>seam-bom</artifactId>
-                <version>${seam.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.jboss.seam</groupId>-->
+                <!--<artifactId>seam-bom</artifactId>-->
+                <!--<version>${seam.version}</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -156,11 +156,13 @@ as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.seam.security</groupId>
             <artifactId>seam-security</artifactId>
+            <version>${seam.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.seam.security</groupId>
             <artifactId>seam-security-external</artifactId>
+            <version>${seam.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
