@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3b6dd111-0453-4536-b96c-f8d9313522ee">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc://127.5.116.1:5432/</jdbc-url>
+    <user-name>postgres</user-name>
+    <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/postgresql/postgresql/8.4-702.jdbc4/postgresql-8.4-702.jdbc4.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
