@@ -1,10 +1,9 @@
-package com.twhitlock;
+package kitchensink;
 
 import kitchensink.controller.MemberRegistration;
 import kitchensink.model.Member;
 import kitchensink.util.Resources;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.core.api.annotation.Inject;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -13,19 +12,14 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import javax.inject.Inject;
 import java.util.logging.Logger;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
-/**
- * User: twhitlock
- * Date: 6/4/12
- * Time: 8:38 AM
- * Test to ensure I have arquillian configured correctly
- */
 @RunWith(Arquillian.class)
-public class IsEverythingConfiguredTest {
+public class MemberRegistrationTest {
     @Deployment
     public static Archive<?> createTestArchive() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
@@ -42,11 +36,15 @@ public class IsEverythingConfiguredTest {
     @Inject
     Logger log;
 
-
-
     @Test
-    public void testSuccess() {
-        assertTrue("Everything is configured", true);
+    public void testRegister() throws Exception {
+        Member newMember = memberRegistration.getNewMember();
+        newMember.setName("Jane Doe");
+        newMember.setEmail("jane@mailinator.com");
+        newMember.setPhoneNumber("2125551234");
+        memberRegistration.register();
+        assertNotNull(newMember.getId());
+        log.info(newMember.getName() + " was persisted with id " + newMember.getId());
     }
 
 }
