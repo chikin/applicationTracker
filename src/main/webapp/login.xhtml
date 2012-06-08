@@ -2,11 +2,20 @@
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xml:lang="en"
+      lang="en">
 <head>
-    <title></title>
+    <title>Application Tracker Login</title>
 </head>
 <body>
+<h:selectOneRadio value="#{openIdAuthenticator.providerCode}">
 
+    <f:selectItems value="#{openIdAuthenticator.providers}" var="p" itemValue="#{p.code}" itemLabel="#{p.name}"/>
+
+</h:selectOneRadio>
 </body>
 </html>

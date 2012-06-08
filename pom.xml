@@ -11,6 +11,7 @@
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
         <javaee6.with.tools.version>1.0.0.M14</javaee6.with.tools.version>
+        <seam.version>3.0.0.Final</seam.version>
     </properties>
 
     <dependencyManagement>
@@ -25,6 +26,13 @@
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
                 <version>${javaee6.with.tools.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.seam</groupId>
+                <artifactId>seam-bom</artifactId>
+                <version>${seam.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -145,22 +153,15 @@ as the API is included in JBoss AS 7 -->
             <artifactId>jboss-as-arquillian-container-managed</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.seam.security</groupId>
+            <artifactId>seam-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam.security</groupId>
+            <artifactId>seam-security-external</artifactId>
+        </dependency>
     </dependencies>
-
-    <!-- Seam Security-->
-    <dependency>
-        <groupId>org.jboss.seam.security</groupId>
-        <artifactId>seam-security-api</artifactId>
-        <version>3.1.0.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.jboss.seam.security</groupId>
-        <artifactId>seam-security</artifactId>
-        <version>3.1.0.Final</version>
-        <scope>runtime</scope>
-    </dependency>
-    <!-- End Seam Security-->
 
 
     <build>
