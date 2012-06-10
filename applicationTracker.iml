@@ -420,7 +420,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss:jandex:1.0.3.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.as:jboss-as-platform-mbean:7.1.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.as:jboss-as-process-controller:7.1.1.Final" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.jboss.logmanager:jboss-logmanager:1.2.2.GA" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jboss.logmanager:jboss-logmanager:1.2.0.CR4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.as:jboss-as-remoting:7.1.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.as:jboss-as-network:7.1.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.as:jboss-as-threads:7.1.1.Final" level="project" />
@@ -487,14 +487,14 @@
     <orderEntry type="library" name="Maven: org.picketlink.idm:picketlink-idm-common:1.5.0.Alpha02" level="project" />
     <orderEntry type="library" name="Maven: org.picketlink.idm:picketlink-idm-spi:1.5.0.Alpha02" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.persistence:seam-persistence:3.1.0.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.persistence:seam-persistence-api:3.1.0.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.transaction:seam-transaction-api:3.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.seam.persistence:seam-persistence-api:3.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.seam.transaction:seam-transaction-api:3.1.0.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.transaction:seam-transaction:3.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.solder:solder-api:3.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.solder:solder-logging:3.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.solder:solder-impl:3.1.0.Final" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.solder:solder-impl:3.1.0.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.international:seam-international:3.1.0.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.seam.international:seam-international-api:3.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.seam.international:seam-international-api:3.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.picketlink.idm:picketlink-idm-core:1.5.0.Alpha02" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.seam.security:seam-security-external:3.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.openid4java:openid4java-nodeps:0.9.6" level="project" />
